@@ -32,26 +32,3 @@ const products = [
 ];
 
 // Your JavaScript code here
-
-function createProductCard(product) {
-  const card = document.createElement("div");
-  card.className = "product-card";
-
-  card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="product-image">
-        <h3 class="product-name">${product.name}</h3>
-        <p class="product-price">$${product.price.toFixed(2)}</p>
-    `;
-
-  return card;
-}
-
-function renderProductGallery() {
-  const gallery = document.getElementById("productGallery");
-  products.forEach((product) => {
-    const card = createProductCard(product);
-    gallery.appendChild(card);
-  });
-}
-
-renderProductGallery();
